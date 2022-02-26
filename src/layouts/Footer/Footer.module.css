@@ -1,0 +1,32 @@
+.footerWrapper {
+  background-color: white;
+}
+
+.footerWrapper footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerWrapper footer > :not(:last-child) {
+  margin-bottom: 4rem;
+}
+
+.socialIcons {
+  display: flex;
+  align-items: center;
+}
+
+.socialIcons > :not(:last-child) {
+  margin-right: 2rem;
+}
+
+@media (max-width: 500px) {
+  .footerBrand {
+    width: 90%;
+    max-width: 300px;
+  }
+  .footerWrapper footer > :not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}

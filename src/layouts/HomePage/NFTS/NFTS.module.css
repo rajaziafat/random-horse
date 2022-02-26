@@ -1,0 +1,45 @@
+.wrapper {
+  position: relative;
+  z-index: 2;
+}
+.wrapper > div {
+  background-color: transparent;
+}
+
+.wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 95%;
+  height: 100%;
+  z-index: -1;
+  background: url(../../../assets/images/horses-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  transform: translateX(-50%);
+  opacity: 0.1;
+}
+
+.nftSlider {
+  display: flex;
+  align-items: center;
+}
+
+.nftSlider > :not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.nftSlider > button {
+  min-width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #bdbdbd;
+  margin-bottom: 100px;
+}
+
+.nftSlider > button > svg {
+  background-color: transparent;
+  filter: invert(1);
+}

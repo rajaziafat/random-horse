@@ -1,0 +1,21 @@
+.partners {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: -1rem;
+}
+
+.partners > img {
+  margin: 2rem;
+}
+
+@media (max-width: 500px) {
+  .partners {
+    margin: -0.5rem;
+  }
+
+  .partners > img {
+    margin: 1rem;
+  }
+}

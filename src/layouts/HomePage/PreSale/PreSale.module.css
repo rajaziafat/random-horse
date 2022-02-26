@@ -1,0 +1,64 @@
+.section {
+  display: flex;
+  align-items: center;
+}
+
+.section_left {
+  flex: 1;
+  margin-right: 6rem;
+}
+
+.section_right {
+  flex: 1;
+}
+
+button a{color:white;
+font-weight: 600;}
+
+.section input {
+  width: 100%;
+  display: block;
+  padding: 1.5rem 2.5rem;
+  border: 3px solid var(--orange);
+  border-radius: 37px;
+  margin: 0 auto;
+}
+.section button {
+  padding: 1rem 3rem;
+  background: var(--orange);
+  border-radius: 10px;
+}
+
+.gallery {
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.galleryCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 27px;
+}
+
+.galleryCards > img {
+  border-radius: 1.5vw;
+}
+
+@media (max-width: 1200px) {
+  .section_left {
+    flex: 1;
+    margin-right: 3rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .section_left {
+    flex: 1;
+    margin-right: 0rem;
+  }
+
+  .galleryCards {
+    gap: 0.8rem;
+  }
+}

@@ -1,0 +1,19 @@
+.section {
+  display: flex;
+  align-items: center;
+}
+
+.section_left {
+  flex: 0.8;
+  margin-right: 5rem;
+}
+.section_right {
+  flex: 1;
+}
+
+@media (max-width: 1200px) {
+  .section_left {
+    flex: 1;
+    margin-right: 3rem;
+  }
+}

@@ -1,0 +1,32 @@
+.accordion {
+  background: #120f0f;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.accordionBtn {
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 100%;
+}
+
+.accordionBtn span {
+  transition: all 0.3s ease;
+  margin-left: 1.5rem;
+}
+
+.accordion.open .accordionBtn span {
+  transform: rotate(180deg);
+}
+
+.acordionBodyWrapper {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.2s ease;
+}
+.acordionBody {
+  padding: 1.5rem 2rem;
+  padding-top: 0;
+}

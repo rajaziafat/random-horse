@@ -1,0 +1,270 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100000 !important;
+  transition: all 0.2s ease;
+  padding: 2rem 0;
+}
+
+.wrapper.scrolled {
+  background-color: black;
+  padding: 1.5rem 0;
+
+  box-shadow: 0 5px 10px rgba(206, 133, 47, 0.2);
+}
+
+.navbarBrand {
+  width: 228px;
+  transition: all 0.2s ease;
+}
+
+.wrapper.scrolled .navbarBrand {
+  width: 180px;
+}
+
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar a,
+.navbar button {
+  font-size: 17px;
+  color: white;
+}
+
+.navbarRight {
+  display: flex;
+  align-items: center;
+}
+
+.navbarRight > :not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.navbar_link {
+  display: flex;
+  align-items: center;
+}
+
+.navbarScrollLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.navbarScrollLink:hover {
+  color: white;
+}
+.navbarScrollLink.active {
+  color: white;
+  font-weight: 800;
+}
+
+.navbarScrollLink img {
+  width: 50px;
+  position: absolute;
+  top: 115%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.navbarScrollActive {
+  color: white;
+  font-weight: 800;
+}
+
+.navbarScrollActive img {
+  opacity: 1;
+}
+
+.navbar_link > :not(:last-child) {
+  margin-right: 1rem;
+}
+
+.navBtns {
+  display: flex;
+  align-items: center;
+}
+
+.navBtns > :not(:last-child) {
+  margin-right: 1rem;
+}
+
+.navBtns > button {
+  padding: 0.7rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.navBtns > button:first-child {
+  border: 3px solid var(--orange);
+  border-radius: 10px;
+}
+.navBtns > button:last-child {
+  border: 3px solid var(--orange);
+  background-color: var(--orange);
+  border-radius: 10px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.mobileBar {
+  display: none;
+}
+
+@media (min-width: 1600px) {
+  .navbar a,
+  .navbar button {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1370px) {
+  .navbar a,
+  .navbar button {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1365px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navbarRight {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 428px;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: unset;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    transform: translateX(428px);
+
+    overflow-y: auto;
+  }
+  .navbarRight.open {
+    transform: translateX(0);
+  }
+
+  .navbar_link {
+    flex-direction: column;
+    align-items: unset !important;
+    margin-top: 2rem;
+  }
+
+  .navbarScrollLink {
+    width: fit-content;
+    color: black;
+    padding: 1.2rem 0;
+    width: 100%;
+    display: flex;
+    align-items: unset;
+    border-bottom: 1px solid rgba(206, 133, 47, 0.2);
+  }
+
+  .navBtns > button:first-child {
+    color: black;
+    flex: 1;
+    font-size: 16px !important;
+    padding: 0.9rem 1rem !important;
+    text-align: center !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbarScrollLink img {
+    display: none;
+  }
+
+  .navbar a,
+  .navbar button {
+    font-size: 20px !important;
+  }
+
+  .navbarScrollLink.active {
+    color: black;
+    font-weight: bold !important;
+  }
+
+  .navbarScrollLink:hover {
+    color: black;
+    font-weight: 800;
+  }
+
+  .mobileBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mobileBar img {
+    width: 160px;
+  }
+
+  .crossIcon {
+    width: 22px !important;
+    cursor: pointer;
+  }
+
+  .navbarScrollActive {
+    color: black;
+    font-weight: 800;
+  }
+
+  .navBtns {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbarRight {
+    width: 300px;
+    transform: translateX(300px);
+  }
+  .navbar a,
+  .navbar button {
+    font-size: 16px !important;
+  }
+
+  .mobileBar img {
+    width: 140px;
+  }
+
+  .navBtns {
+    flex-direction: column;
+  }
+  .navBtns button {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .navBtns > :not(:last-child) {
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+  }
+
+  .navbarBrand {
+    width: 180px;
+  }
+
+  .wrapper.scrolled .navbarBrand {
+    width: 150px;
+  }
+}

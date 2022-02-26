@@ -1,0 +1,119 @@
+.wrapper {
+  /* min-height: 100vh; */
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 0 2rem; */
+  text-align: center;
+}
+/* 
+.wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../../../assets/images/thenfts.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  opacity: 0.5;
+} */
+
+.desc {
+  max-width: 920px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 12px;
+  z-index: -1;
+}
+
+.gridImg {
+  border-radius: 3vw;
+}
+
+.keyBtn {
+  position: absolute;
+  bottom: 6%;
+  right: 2%;
+}
+
+@media (max-width: 1000px) {
+  .wrapper::before {
+    background-size: cover;
+  }
+
+  .keyBtn {
+    position: static;
+    bottom: 0;
+    right: 0;
+    padding: 0.8rem 1rem !important;
+    font-size: 14px !important;
+    margin-top: 2rem;
+  }
+
+  .desc {
+    top: 30%;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    z-index: -1;
+  }
+
+  /* .keyBtn {
+      display: none;
+    } */
+
+  .grid > .notHoverable {
+    display: none;
+  }
+
+  .grid > img:nth-child(1),
+  .grid > img:nth-child(2),
+  .grid > img:nth-child(5),
+  .grid > img:nth-child(6) {
+    display: block;
+  }
+
+  .desc {
+    top: 20%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    z-index: 10;
+    text-align: left;
+  }
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    justify-content: start;
+    text-align: left;
+  }
+  .wrapper h1 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 400px) {
+  .wrapper h1 {
+    font-size: 28px;
+  }
+}

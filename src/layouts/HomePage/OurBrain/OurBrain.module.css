@@ -1,0 +1,63 @@
+.ourBrainWrapper {
+  background-color: white;
+}
+
+.teamCards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: -1.5rem;
+}
+.teamCards > div {
+  margin: 3rem;
+}
+
+.socialIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialIcons > :not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.teamCard {
+  flex: 1;
+  /* border: 2px solid red; */
+}
+
+.teamCard > img {
+  width: 197.67px;
+  height: 197.67px;
+  border-radius: 50%;
+  border: 5px solid var(--yellow);
+}
+
+.advisorsCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.advisorCard {
+  padding: 47px 0px;
+  min-width: 100%;
+  border: 5px solid var(--yellow);
+  border-radius: 20px;
+  width: fit-content;
+}
+
+@media (max-width: 1000px) {
+  .teamCards > div {
+    margin: 1rem;
+  }
+
+  .teamCard > img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--yellow);
+  }
+}
