@@ -18,7 +18,7 @@ const GridItem = ({ img, data, index }) => {
           </div>
         </div>
         <div className="flip-card-back bg-gradient">
-          <p className="black font-gilroy-extrabold fs-20px uppercase">TITLE 1</p>
+          <p className="black font-gilroy-extrabold fs-20px uppercase">{data.title}</p>
         </div>
       </div>
     </a>
